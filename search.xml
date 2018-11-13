@@ -1,40 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title>test글2</title>
-      <link href="/2018/11/11/test%EA%B8%802/"/>
-      <url>/2018/11/11/test%EA%B8%802/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    <entry>
-      <title>test글</title>
-      <link href="/2018/11/11/test%EA%B8%80/"/>
-      <url>/2018/11/11/test%EA%B8%80/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2018/11/11/hello-world/"/>
-      <url>/2018/11/11/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[test글2]]></title>
+    <url>%2F2018%2F11%2F11%2Ftest%EA%B8%802%2F</url>
+    <content type="text"><![CDATA[테스트]]></content>
+      <categories>
+        <category>Mobile</category>
+      </categories>
+      <tags>
+        <tag>Tag1</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[React Native(Expo) Typescript 적용]]></title>
+    <url>%2F2018%2F11%2F11%2FApplyRnTs%2F</url>
+    <content type="text"><![CDATA[React Native(Expo) Typescript 적용 정리, 기록 목적으로 작성된 글로, 친절하게 작성된 글이 아님을 알려드립니다. 환경 Windows 10 Expo CLI 2.x (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경) Node.js 8.11.2 Expo CLI, Typescirpt 설치 1$ yarn global expo-cli 프로젝트 생성 1$ expo init &lt;Project Name&gt; ※ "blank app" 선택 Typescript관련 패키지 설치 123$ cd &lt;Project Name&gt;$ yarn add typescript react-native-typescript-transformer --dev$ yarn add @types/react @types/react-native @types/expo @types/expo__vector-icons --dev tsconfig.json 파일 생성 &amp; 수정 1$ ./node_modules/.bin/tsc.cmd --init ※ "tsconfig.json"파일 생성 1234567891011121314151617181920&#123; "compilerOptions": &#123; "target": "es2017", "module": "es2015", "lib": [ "es2017" ], "jsx": "react-native", "sourceMap": true, "noEmit": true, "importHelpers": true, "moduleResolution": "node", "allowSyntheticDefaultImports": true, "experimentalDecorators": true, "emitDecoratorMetadata": true &#125;, "exclude": [ "node_modules" ]&#125; tslint.json 파일 생성 create-react-app &lt;프로젝트명&gt; –scripts-version=react-scripts-ts 로 생성된 Typescript 프로젝트에 tslint.json파일 복사 12345678910&#123; "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"], "linterOptions": &#123; "exclude": [ "config/**/*.js", "node_modules/**/*.ts", "coverage/lcov-report/*.js" ] &#125;&#125; app.json파일 추가 12345678&#123; "expo": &#123; "packagerOpts": &#123; "sourceExts": ["ts", "tsx"], "transformer": "node_modules/react-native-typescript-transformer/index.js" &#125; &#125;&#125; 파일명 변경 12$ mkdir src$ mv App.js src/App.tsx App.ts 파일생성 12import App from from './src/App';export default App; 실행 1$ expo start 결과]]></content>
+      <categories>
+        <category>Mobile</category>
+        <category>React Native</category>
+      </categories>
+      <tags>
+        <tag>Tag1</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F11%2F11%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
 </search>
