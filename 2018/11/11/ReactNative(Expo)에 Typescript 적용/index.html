@@ -21,7 +21,7 @@
 <meta property="og:description" content="ReactNative(Expo)에 Typescript 적용 정리, 기록을 위해 작성된 글입니다.   환경  Windows 10 Node.js 8.11.2 Expo CLI 2.x (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경)   Expo CLI, Typescirpt 설치 1$ yarn global expo-cli  프로젝트 생성  1$ e">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://celtonrd8.github.io/2018/11/11/ReactNative(Expo)에%20Typescript%20적용/result.jpg">
-<meta property="og:updated_time" content="2018-11-15T02:58:54.720Z">
+<meta property="og:updated_time" content="2018-11-17T08:20:18.301Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ReactNative(Expo)에 Typescript 적용">
 <meta name="twitter:description" content="ReactNative(Expo)에 Typescript 적용 정리, 기록을 위해 작성된 글입니다.   환경  Windows 10 Node.js 8.11.2 Expo CLI 2.x (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경)   Expo CLI, Typescirpt 설치 1$ yarn global expo-cli  프로젝트 생성  1$ e">
@@ -189,22 +189,20 @@
 </ul>
 </li>
 <li><p>Expo CLI, Typescirpt 설치</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> yarn global expo-cli</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> yarn global expo-cli</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>프로젝트 생성 </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> expo init &lt;Project Name&gt;  ※ <span class="string">"blank app"</span> 선택</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> expo init &lt;Project Name&gt;  ※ "blank app" 선택</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Typescript관련 패키지 설치</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> &lt;Project Name&gt;</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> yarn add typescript react-native-typescript-transformer --dev</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> yarn add @types/react @types/react-native @types/expo @types/expo__vector-icons --dev</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd &lt;Project Name&gt;</span><br><span class="line"><span class="meta">$</span> yarn add typescript react-native-typescript-transformer --dev</span><br><span class="line"><span class="meta">$</span> yarn add @types/react @types/react-native @types/expo @types/expo__vector-icons --dev</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>tsconfig.json 파일 생성 &amp; 수정</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ./node_modules/.bin/tsc.cmd --init  ※ <span class="string">"tsconfig.json"</span>파일 생성</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ./node_modules/.bin/tsc.cmd --init  ※ "tsconfig.json"파일 생성</span><br></pre></td></tr></table></figure>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"compilerOptions"</span>: &#123;</span><br><span class="line">      <span class="attr">"target"</span>: <span class="string">"es2017"</span>,</span><br><span class="line">      <span class="attr">"module"</span>: <span class="string">"es2015"</span>,</span><br><span class="line">      <span class="attr">"lib"</span>: [</span><br><span class="line">          <span class="string">"es2017"</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">"jsx"</span>: <span class="string">"react-native"</span>,</span><br><span class="line">      <span class="attr">"sourceMap"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"noEmit"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"importHelpers"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"moduleResolution"</span>: <span class="string">"node"</span>,</span><br><span class="line">      <span class="attr">"allowSyntheticDefaultImports"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"experimentalDecorators"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"emitDecoratorMetadata"</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"exclude"</span>: [</span><br><span class="line">      <span class="string">"node_modules"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>tslint.json 파일 생성</p>
 <ul>
-<li><p>react CRA로 생성된 Typescript 프로젝트에 tslint.json파일 복사(아래 내용)</p>
-</li>
 <li><p>세부 설정은 <a href="https://palantir.github.io/tslint/rules/" target="_blank" rel="noopener">tslint 공식홈</a> 참조</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"extends"</span>: [<span class="string">"tslint:recommended"</span>, <span class="string">"tslint-react"</span>, <span class="string">"tslint-config-prettier"</span>],</span><br><span class="line">  <span class="attr">"linterOptions"</span>: &#123;</span><br><span class="line">    <span class="attr">"exclude"</span>: [</span><br><span class="line">      <span class="string">"config/**/*.js"</span>,</span><br><span class="line">      <span class="string">"node_modules/**/*.ts"</span>,</span><br><span class="line">      <span class="string">"coverage/lcov-report/*.js"</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -216,7 +214,7 @@
 </ul>
 </li>
 <li><p>파일명 변경</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir src</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mv App.js src/App.tsx</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir src</span><br><span class="line"><span class="meta">$</span> mv App.js src/App.tsx</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>App.ts 파일생성</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="keyword">from</span> <span class="string">'./src/App'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
@@ -238,7 +236,7 @@
 
 
 
-    <a data-url="https://celtonrd8.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/" data-id="cjoi0a9g60004h4votzw5ydqc" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="https://celtonrd8.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/" data-id="cjolgk6w7000198volb87lct3" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

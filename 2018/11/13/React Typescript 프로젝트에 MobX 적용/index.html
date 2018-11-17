@@ -21,7 +21,7 @@
 <meta property="og:description" content="React Typescript 프로젝트에 MobX 적용 목표 : Typescript로 구성된 React 프로젝트에 MobX를 적용하고 Store 기반의 라우터 사용   환경 123Windows 10Node.js 8.11.2CRA 2.1.1  MobX란?  MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중 하나입니다.  공식홈페이지에서는 Mo">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://celtonrd8.github.io/2018/11/13/React%20Typescript%20프로젝트에%20MobX%20적용/result.gif">
-<meta property="og:updated_time" content="2018-11-15T02:58:02.936Z">
+<meta property="og:updated_time" content="2018-11-17T08:18:29.403Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Typescript 프로젝트에 MobX 적용">
 <meta name="twitter:description" content="React Typescript 프로젝트에 MobX 적용 목표 : Typescript로 구성된 React 프로젝트에 MobX를 적용하고 Store 기반의 라우터 사용   환경 123Windows 10Node.js 8.11.2CRA 2.1.1  MobX란?  MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중 하나입니다.  공식홈페이지에서는 Mo">
@@ -236,9 +236,9 @@
 <li><p>src/stores/CounterStore.ts 파일 생성 후 아래 내용을 입력 합니다.</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; observable, action &#125; <span class="keyword">from</span> <span class="string">'mobx'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> CounterStore &#123;</span><br><span class="line">    <span class="meta">@observable</span> <span class="keyword">public</span> counter: <span class="built_in">number</span>;</span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.counter = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@action</span></span><br><span class="line">    <span class="keyword">public</span> increment = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.counter++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@action</span></span><br><span class="line">    <span class="keyword">public</span> decrement = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.counter--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>데코레이터 (세부내용은 추후 포스팅에서..)</p>
+<li><p>데코레이터 설명</p>
 <ul>
-<li><p>“@observable” 데코레이터를 사용한 값이 변경되면 이를 감자 하여 상태를 업데이트 한다.</p>
+<li><p>“@observable” 데코레이터를 사용한 값이 변경되면 이를 감지 하여 상태를 업데이트 한다.</p>
 </li>
 <li><p>“@action” 데코레이터는 “@observable”값을 변경 시키는 경우 사용한다.</p>
 </li>
@@ -285,9 +285,9 @@
 <li><p>예제 이므로 components 폴더는 사용하지 않습니다.</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; observer, inject &#125; <span class="keyword">from</span> <span class="string">'mobx-react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; CounterStore &#125; <span class="keyword">from</span> <span class="string">'src/stores/CounterStore'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; COUNTER_STORE &#125; <span class="keyword">from</span> <span class="string">'src/constant/stores.const'</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@inject</span>(</span><br><span class="line">  COUNTER_STORE</span><br><span class="line">)</span><br><span class="line"><span class="meta">@observer</span></span><br><span class="line"><span class="keyword">class</span> Counter <span class="keyword">extends</span> React.Component&lt;&#123;&#125;, &#123;&#125;&gt; &#123;</span><br><span class="line">  <span class="keyword">public</span> render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; counter, increment, decrement &#125; = (<span class="keyword">this</span>.props[COUNTER_STORE] <span class="keyword">as</span> CounterStore);</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h2&gt;Counter : &#123;counter&#125;&lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">        &lt;button onClick=&#123;increment&#125;&gt;Increment&lt;/</span>button&gt;</span><br><span class="line">        &lt;button onClick=&#123;decrement&#125;&gt;Decrement&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Counter;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>데코레이터 (세부내용은 추후 포스팅에서..)</p>
+<li><p>데코</p>
 <ul>
-<li><p>“@inject” : 스토어를 해당 컴포넌트의 props에 주입합니다.</p>
+<li><p>“@inject” : 컴포넌트의 props에 스토렁를 주입합니다.</p>
 </li>
 <li><p>“@observer”: 스토어의 변화를 관찰하여 업데이트시 결과를 반영합니다.</p>
 </li>
@@ -316,7 +316,7 @@
 
 
 
-    <a data-url="https://celtonrd8.github.io/2018/11/13/React Typescript 프로젝트에 MobX 적용/" data-id="cjoi0a9fu0000h4vo5lmwc514" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="https://celtonrd8.github.io/2018/11/13/React Typescript 프로젝트에 MobX 적용/" data-id="cjolgk6w2000098voo5vr59ae" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
