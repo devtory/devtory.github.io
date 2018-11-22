@@ -16,16 +16,16 @@
 <meta name="keywords" content="ReactNative,Expo,Typescript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ReactNative(Expo)에 Typescript 적용">
-<meta property="og:url" content="https://celtonrd8.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/index.html">
+<meta property="og:url" content="https://devtory.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/index.html">
 <meta property="og:site_name" content="unknownerror">
 <meta property="og:description" content="ReactNative(Expo)에 Typescript 적용 정리, 기록을 위해 작성된 글입니다.   환경  Windows 10 Node.js 8.11.2 Expo CLI 2.x (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경)   Expo CLI, Typescirpt 설치 1$ yarn global expo-cli  프로젝트 생성  1$ e">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://celtonrd8.github.io/2018/11/11/ReactNative(Expo)에%20Typescript%20적용/result.jpg">
-<meta property="og:updated_time" content="2018-11-17T08:20:18.301Z">
+<meta property="og:image" content="https://devtory.github.io/2018/11/11/ReactNative(Expo)에%20Typescript%20적용/result.jpg">
+<meta property="og:updated_time" content="2018-11-22T02:16:13.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ReactNative(Expo)에 Typescript 적용">
 <meta name="twitter:description" content="ReactNative(Expo)에 Typescript 적용 정리, 기록을 위해 작성된 글입니다.   환경  Windows 10 Node.js 8.11.2 Expo CLI 2.x (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경)   Expo CLI, Typescirpt 설치 1$ yarn global expo-cli  프로젝트 생성  1$ e">
-<meta name="twitter:image" content="https://celtonrd8.github.io/2018/11/11/ReactNative(Expo)에%20Typescript%20적용/result.jpg">
+<meta name="twitter:image" content="https://devtory.github.io/2018/11/11/ReactNative(Expo)에%20Typescript%20적용/result.jpg">
     
 
     
@@ -195,7 +195,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> expo init &lt;Project Name&gt;  ※ "blank app" 선택</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Typescript관련 패키지 설치</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd &lt;Project Name&gt;</span><br><span class="line"><span class="meta">$</span> yarn add typescript react-native-typescript-transformer --dev</span><br><span class="line"><span class="meta">$</span> yarn add @types/react @types/react-native @types/expo @types/expo__vector-icons --dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd &lt;Project Name&gt;</span><br><span class="line"><span class="meta">$</span> yarn add typescript react-native-typescript-transformer tslib</span><br><span class="line"><span class="meta">$</span> yarn add @types/react @types/react-native @types/expo @types/expo__vector-icons --dev</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>tsconfig.json 파일 생성 &amp; 수정</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ./node_modules/.bin/tsc.cmd --init  ※ "tsconfig.json"파일 생성</span><br></pre></td></tr></table></figure>
@@ -208,7 +208,7 @@
 </li>
 </ul>
 </li>
-<li><p>app.json파일  추가</p>
+<li><p>app.json파일  수정</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"expo"</span>: &#123;</span><br><span class="line">        <span class="attr">"packagerOpts"</span>: &#123;</span><br><span class="line">          <span class="attr">"sourceExts"</span>: [<span class="string">"ts"</span>, <span class="string">"tsx"</span>],</span><br><span class="line">          <span class="attr">"transformer"</span>: <span class="string">"node_modules/react-native-typescript-transformer/index.js"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -217,7 +217,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir src</span><br><span class="line"><span class="meta">$</span> mv App.js src/App.tsx</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>App.ts 파일생성</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="keyword">from</span> <span class="string">'./src/App'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./src/App'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -236,7 +236,7 @@
 
 
 
-    <a data-url="https://celtonrd8.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/" data-id="cjolgsm360000k0vowa7vkbjq" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="https://devtory.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/" data-id="cjos56grp0001zsvo93nib1mm" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -454,7 +454,7 @@
     var disqus_shortname = 'unknownerror';
     
     
-    var disqus_url = 'https://celtonrd8.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/';
+    var disqus_url = 'https://devtory.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/';
     
     (function() {
     var dsq = document.createElement('script');
