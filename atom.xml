@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>unknownerror</title>
+  <title>devtory</title>
   
   <subtitle>Summary</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://devtory.github.io/</id>
   
   <author>
-    <name>celtonrd8</name>
+    <name>devtory</name>
     
   </author>
   
