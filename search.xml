@@ -3,15 +3,14 @@
   <entry>
     <title><![CDATA[Promise와 Observable 차이]]></title>
     <url>%2F2018%2F11%2F23%2FPromise%EC%99%80%20Observable%20%EC%B0%A8%EC%9D%B4%2F</url>
-    <content type="text"><![CDATA[Promise와 Observable 차이Promise resolve 또는 reject 한개의 값만 반환 12345678910111213141516const promiseError = new Promise(function(resolve, reject) &#123; resolve(10); // 값 전달 reject('error'); // 에러 전달&#125;); promiseError.then( function(value) &#123; console.log(value); &#125;, function(error) &#123; console.error(error); &#125;);&gt;&gt;&gt;10 // resolve(10) 실행후 종료되므로 error는 발생하지 않음 Promise는 중간에 취소 할 수 없음 만약 http request를 통해 검색 기능 구현시 아래와 같이 모든 키보드 입력 검색 love 검색시 l, lo, lov, love 4가지 모두 검색 요청 Async/Await 사용 가능 Observable 이벤트 또는 데이터 스트림과 같이 연속 데이터 반환 123456789101112131415161718192021222324const &#123; Observable &#125; = require ('rxjs'); const observableCreated$ = Observable.create(function(observer) &#123; try &#123; observer.next(1); // 다음에 전달할 값 또는 이벤트 발행 observer.next(2); throw("throw err test"); &#125; catch (err) &#123; observer.error(err); // 에러나 예외를 받고, 구독 종료 &#125; finally &#123; observer.complete(); // 정상 적으로 구독 완료시 호출, 구독 조요 &#125;&#125;); observableCreated$.subscribe( function next(item) &#123; console.log(item); &#125;, function error(err) &#123; console.log("error: " + err); &#125;, function complete() &#123; console.log('complete'); &#125;);&gt;&gt;&gt;12error: throw err test 중간에 취소 할 수 있음 만약 http request를 통해 검색 기능 구현시 필요없는 값은 삭제가능 love 검색시 l, lo, lov 값 삭제 후 love만 실행 123456this.term.valueChanges .debounceTime(400) // 400밀초 미만의 출력 삭제 .distinctUntilChanged() .subscribe(searchTerm =&gt; &#123; ... &#125;);]]></content>
+    <content type="text"><![CDATA[Promise와 Observable 차이Promise resolve 또는 reject 한개의 값만 반환 12345678910111213141516const promiseError = new Promise(function(resolve, reject) &#123; resolve(10); // 값 전달 reject('error'); // 에러 전달&#125;); promiseError.then( function(value) &#123; console.log(value); &#125;, function(error) &#123; console.error(error); &#125;); &gt;&gt;&gt;10 // resolve(10) 실행후 종료되므로 error는 발생하지 않음 Promise는 중간에 취소 할 수 없음 만약 http request를 통해 검색 기능 구현시 아래와 같이 모든 키보드 입력 검색 love 검색시 l, lo, lov, love 4가지 모두 검색 요청 Async/Await 사용 가능 Observable 이벤트 또는 데이터 스트림과 같이 연속 데이터 반환 123456789101112131415161718192021222324const &#123; Observable &#125; = require ('rxjs'); const observableCreated$ = Observable.create(function(observer) &#123; try &#123; observer.next(1); // 다음에 전달할 값 또는 이벤트 발행 observer.next(2); throw("throw err test"); &#125; catch (err) &#123; observer.error(err); // 에러나 예외를 받고, 구독 종료 &#125; finally &#123; observer.complete(); // 정상 적으로 구독 완료시 호출, 구독 조요 &#125;&#125;); observableCreated$.subscribe( function next(item) &#123; console.log(item); &#125;, function error(err) &#123; console.log("error: " + err); &#125;, function complete() &#123; console.log('complete'); &#125;);&gt;&gt;&gt;12error: throw err test 중간에 취소 할 수 있음 만약 http request를 통해 검색 기능 구현시 필요없는 값은 삭제가능 love 검색시 l, lo, lov 값 삭제 후 love만 실행 123456this.term.valueChanges .debounceTime(400) // 400밀초 미만의 출력 삭제 .distinctUntilChanged() .subscribe(searchTerm =&gt; &#123; ... &#125;);]]></content>
       <categories>
-        <category>mathematics</category>
-        <category>statistics</category>
+        <category>Javascript</category>
       </categories>
       <tags>
         <tag>javascript</tag>
-        <tag>closure</tag>
-        <tag>scope</tag>
+        <tag>promise</tag>
+        <tag>observable</tag>
       </tags>
   </entry>
   <entry>
