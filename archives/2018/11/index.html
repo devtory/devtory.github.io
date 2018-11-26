@@ -70,7 +70,7 @@
                                     <a class="main-nav-list-link" href="/">홈</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Frontend/">Frontend</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Frontend/React/">React</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mobile/">Mobile</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mobile/ReactNative/">ReactNative</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Frontend/">Frontend</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Frontend/React/">React</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mobile/">Mobile</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mobile/ReactNative/">ReactNative</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/mathematics/">mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/mathematics/statistics/">statistics</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -155,6 +155,35 @@
         
         <div class="article-meta">
             <div class="category">
+            <a class="article-category-link" href="/categories/mathematics/">mathematics</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/mathematics/statistics/">statistics</a>
+            </div>
+            <div class="date"><time datetime="2018-11-23T06:43:05.000Z" itemprop="datePublished">2018-11-23</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/11/23/Promise와 Observable 차이/">Promise와 Observable 차이</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Promise와 Observable 차이Promise
+resolve 또는 reject 한개의 값만 반환 
+12345678910111213141516const promiseError = new Promise(function(resolve, reject) &#123;  resolve(10); // 값 전달  reject('error'); // 에러 전달&#12
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
             <a class="article-category-link" href="/categories/Frontend/">Frontend</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Frontend/React/">React</a>
             </div>
             <div class="date"><time datetime="2018-11-13T06:06:19.000Z" itemprop="datePublished">2018-11-13</time></div>
@@ -174,19 +203,23 @@
 환경
 123Windows 10Node.js 8.11.2CRA 2.1.1
 
-MobX란?
+MobX ?
 
-MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중 하나입니다.
+MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중 하나 입니다.
 
-공식홈페이지에서는 Mo
+공식홈페이지에서는 M
         </p>
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -206,53 +239,14 @@ MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중 하
 
         <p class="article-excerpt">
             ReactNative(Expo)에 Typescript 적용
-정리, 기록을 위해 작성된 글입니다.
+목표 : Expo CLI를 통해 생성된 프로젝트에 Typescript 적용
 
 
 환경
+123Windows 10Node.js 8.11.2Expo CLI 2.X (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경)
 
-Windows 10
-Node.js 8.11.2
-Expo CLI 2.x (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경)
-
-
-Expo CLI, Typescirpt 설치
-1$ yarn global expo-cli
-
-프로젝트 생성 
-1$ e
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-11-11T08:34:39.247Z" itemprop="datePublished">2018-11-11</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/11/11/hello-world/">Hello World</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+Expo CLI 설치
+1$ yarn global expo-cli    ※ 또
         </p>
     </div>
 </article>
@@ -334,7 +328,7 @@ Quick
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">카테고리</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Frontend/">Frontend</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Frontend/React/">React</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mobile/">Mobile</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mobile/ReactNative/">ReactNative</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Frontend/">Frontend</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Frontend/React/">React</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mobile/">Mobile</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mobile/ReactNative/">ReactNative</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mathematics/">mathematics</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mathematics/statistics/">statistics</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -344,7 +338,7 @@ Quick
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">태그</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Expo/">Expo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mobx/">Mobx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typescript/">Typescript</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Expo/">Expo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mobx/">Mobx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typescript/">Typescript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/closure/">closure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
