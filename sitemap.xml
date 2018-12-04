@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://devtory.github.io/2018/11/16/Express%EC%97%90%20Typescript%EC%99%80%20Inversify%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</loc>
+    
+    <lastmod>2018-12-04T05:43:33.473Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://devtory.github.io/2018/11/27/ReactNative(Expo)%EC%97%90%20Mobx(ES6)%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</loc>
     
-    <lastmod>2018-12-03T13:08:06.677Z</lastmod>
+    <lastmod>2018-12-03T13:12:36.121Z</lastmod>
     
   </url>
   
