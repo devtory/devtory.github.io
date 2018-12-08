@@ -21,7 +21,7 @@
 <meta property="og:description" content="비동기 프로그래밍과 콜백 함수 정리 목적으로 작성한 글 입니다  비동기 프로그래밍과 콜백 함수 자바스크립트는 싱글스레드(single-threaded) 프로그래밍 언어 이므로 하나의 콜스택(Call Stack)을 갖고 있다  예를 들어 A함수 내부에서 B함수를 실행시키는 경우 콜스택을 보면,  A함수, B함수 순으로 콜스택에 저장 된다  나중에 입력된 B함수">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://devtory.github.io/2018/11/23/비동기%20프로그래밍과%20콜백%20함수/callstack_example.png">
-<meta property="og:updated_time" content="2018-12-08T04:34:17.438Z">
+<meta property="og:updated_time" content="2018-12-08T04:37:45.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="비동기 프로그래밍과 콜백 함수">
 <meta name="twitter:description" content="비동기 프로그래밍과 콜백 함수 정리 목적으로 작성한 글 입니다  비동기 프로그래밍과 콜백 함수 자바스크립트는 싱글스레드(single-threaded) 프로그래밍 언어 이므로 하나의 콜스택(Call Stack)을 갖고 있다  예를 들어 A함수 내부에서 B함수를 실행시키는 경우 콜스택을 보면,  A함수, B함수 순으로 콜스택에 저장 된다  나중에 입력된 B함수">
@@ -191,7 +191,7 @@
 </li>
 <li><p>위 동작을 코드와 이미지로 보면 아래와 같다</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funcB</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funcA</span>(<span class="params"></span>) </span>&#123;    </span><br><span class="line">    funcB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">funcA();</span><br></pre></td></tr></table></figure>
-<p><img src="callstack_example.png" title="콜스택 동작"></p>
+<p><img src="callstack_example.png" alt="콜스택 동작"></p>
 </li>
 </ul>
 </li>
@@ -208,7 +208,8 @@
 <li><p>대표적인 논블록킹(비동기) 함수인 fs.readFile()는 아래 코드와 같이, 콜백함수를 통해 결과를 처리하며, 블록킹 되지 않기 때문에 바로 다음에 호출되는 console.log()를 처리한다</p>
   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line">fs.readFile(<span class="string">'/file.md'</span>, (err, data) =&gt; &#123; </span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">throw</span> err; </span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'result'</span>); <span class="comment">// 콜백함수를 통해 결과를 처리</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'after read file'</span>); <span class="comment">// fs.readfile() 이후 바로 실행</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//// 실행결과</span></span><br><span class="line">after read file</span><br><span class="line">result</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>블록킹과 논블록킹을 http 요청/응답을 예로들어 타임라인 상에 표현해보면 아래와 같다<br><img src="blocking_vs_nonblocking.png" title="블록킹 vs 논블록킹"></p>
+<li><p>블록킹과 논블록킹을 http 요청/응답을 예로들어 타임라인 상에 표현해보면 아래와 같다</p>
+<p><img src="blocking_vs_nonblocking.png" alt="블록킹 vs 논블록킹"></p>
 </li>
 </ul>
 </li>
@@ -229,7 +230,7 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Start!</span><br><span class="line">Next Statement!</span><br><span class="line">Timeout Callback!</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>위 코드의 흐름을 그림으로 나타내보면 아래와 같다</p>
-<p>  <img src="async_flow.png" title="비동기 동작 전체"></p>
+<p>  <img src="async_flow.png" alt="비동기 동작 전체"></p>
 </li>
 </ul>
 </li>
@@ -243,7 +244,7 @@
 
 
 
-    <a data-url="https://devtory.github.io/2018/11/23/비동기 프로그래밍과 콜백 함수/" data-id="cjpeyt5090006covo5l9h1ejx" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="https://devtory.github.io/2018/11/23/비동기 프로그래밍과 콜백 함수/" data-id="cjpeyxlbx0004uovo0mo0ecgy" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
