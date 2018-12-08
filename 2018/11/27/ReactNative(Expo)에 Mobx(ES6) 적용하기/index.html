@@ -12,18 +12,18 @@
     
         <meta name="keywords" content="Mobx,ReactNative,ES6">
     
-    <meta name="description" content="ReactNative(Expo)에 Mobx(ES6) 적용하기 목표 : Expo CLI를 통해 생성된 ES6 프로젝트에 Mobx 적용하기   Why? ES6 지금까지 까지 Typescript를 사용했지만, 한가지 아쉬운점은 레퍼런스가 부족하다는점 입니다.  다행히 Server와 Web까지는 1~2년 전보다 생태계가  급격히 발전하여 좋은 레퍼런스가 생겨나고">
+    <meta name="description" content="ReactNative(Expo)에 Mobx(ES6) 적용하기 정리 목적으로 작성한 글 입니다   목표 : Expo CLI를 통해 생성된 ES6 프로젝트에 Mobx 적용하기   Why? ES6 지금까지 까지 Typescript를 사용했지만, 한가지 아쉬운점은 레퍼런스가 부족하다는점이다.  다행히 Server와 Web까지는 1~2년 전보다 생태계가  급격히 발">
 <meta name="keywords" content="Mobx,ReactNative,ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ReactNative(Expo)에 Mobx(ES6) 적용하기">
 <meta property="og:url" content="https://devtory.github.io/2018/11/27/ReactNative(Expo)에 Mobx(ES6) 적용하기/index.html">
 <meta property="og:site_name" content="devtory">
-<meta property="og:description" content="ReactNative(Expo)에 Mobx(ES6) 적용하기 목표 : Expo CLI를 통해 생성된 ES6 프로젝트에 Mobx 적용하기   Why? ES6 지금까지 까지 Typescript를 사용했지만, 한가지 아쉬운점은 레퍼런스가 부족하다는점 입니다.  다행히 Server와 Web까지는 1~2년 전보다 생태계가  급격히 발전하여 좋은 레퍼런스가 생겨나고">
+<meta property="og:description" content="ReactNative(Expo)에 Mobx(ES6) 적용하기 정리 목적으로 작성한 글 입니다   목표 : Expo CLI를 통해 생성된 ES6 프로젝트에 Mobx 적용하기   Why? ES6 지금까지 까지 Typescript를 사용했지만, 한가지 아쉬운점은 레퍼런스가 부족하다는점이다.  다행히 Server와 Web까지는 1~2년 전보다 생태계가  급격히 발">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2018-12-03T13:12:36.121Z">
+<meta property="og:updated_time" content="2018-12-08T04:20:51.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ReactNative(Expo)에 Mobx(ES6) 적용하기">
-<meta name="twitter:description" content="ReactNative(Expo)에 Mobx(ES6) 적용하기 목표 : Expo CLI를 통해 생성된 ES6 프로젝트에 Mobx 적용하기   Why? ES6 지금까지 까지 Typescript를 사용했지만, 한가지 아쉬운점은 레퍼런스가 부족하다는점 입니다.  다행히 Server와 Web까지는 1~2년 전보다 생태계가  급격히 발전하여 좋은 레퍼런스가 생겨나고">
+<meta name="twitter:description" content="ReactNative(Expo)에 Mobx(ES6) 적용하기 정리 목적으로 작성한 글 입니다   목표 : Expo CLI를 통해 생성된 ES6 프로젝트에 Mobx 적용하기   Why? ES6 지금까지 까지 Typescript를 사용했지만, 한가지 아쉬운점은 레퍼런스가 부족하다는점이다.  다행히 Server와 Web까지는 1~2년 전보다 생태계가  급격히 발">
     
 
     
@@ -176,13 +176,16 @@
         
         <div class="article-entry" itemprop="articleBody">
             <h1 id="ReactNative-Expo-에-Mobx-ES6-적용하기"><a href="#ReactNative-Expo-에-Mobx-ES6-적용하기" class="headerlink" title="ReactNative(Expo)에 Mobx(ES6) 적용하기"></a>ReactNative(Expo)에 Mobx(ES6) 적용하기</h1><blockquote>
+<p>정리 목적으로 작성한 글 입니다</p>
+</blockquote>
+<blockquote>
 <p>목표 : Expo CLI를 통해 생성된 ES6 프로젝트에 Mobx 적용하기</p>
 </blockquote>
 <ul>
 <li>Why? ES6<ul>
-<li>지금까지 까지 Typescript를 사용했지만, 한가지 아쉬운점은 레퍼런스가 부족하다는점 입니다. </li>
-<li>다행히 Server와 Web까지는 1~2년 전보다 생태계가  급격히 발전하여 좋은 레퍼런스가 생겨나고 있어 Typescript를 적용하기 좋은 환경이 갖추어졌습니다.</li>
-<li>하지만 Expo에서 Typescript에 관한 레퍼런스가 매우 적어, 이번 토이 프로젝트는 Tyepscript를 고집하지 않고 ES6를 사용 하기로 했습니다. 추후 조금더 생태계가 조성되면 Typescript를 사용해야 겠습니다.</li>
+<li>지금까지 까지 Typescript를 사용했지만, 한가지 아쉬운점은 레퍼런스가 부족하다는점이다. </li>
+<li>다행히 Server와 Web까지는 1~2년 전보다 생태계가  급격히 발전하여 좋은 레퍼런스가 생겨나고 있어 Typescript를 적용하기 좋은 환경이 갖추어졌다.</li>
+<li>하지만 Expo에서는 Typescript에 관한 레퍼런스가 적어,  당분간 Tyepscript를 고집하지 않고 ES6를 사용하고, 추후 조금더 생태계가 조성되면 Typescript를 사용 해야겠다.</li>
 </ul>
 </li>
 </ul>
@@ -211,7 +214,7 @@
 </li>
 </ul>
 <blockquote>
-<p>단순한 카운터를 만들기 위해 카운터 스토어를 생성합니다.</p>
+<p>단순한 카운터를 만들기 위해 카운터 스토어를 생성</p>
 </blockquote>
 <ul>
 <li><p>엔트리파일 변경</p>
@@ -226,26 +229,26 @@
 <ul>
 <li><p>src/stores폴더 생성</p>
 </li>
-<li><p>src/stores/CounterStores.ts 파일 생성 후 아래 내용을 입력 합니다.</p>
+<li><p>src/stores/CounterStores.ts 파일 생성 후 아래 내용을 입력</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; observable, action &#125; <span class="keyword">from</span> <span class="string">'mobx'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> CounterStore &#123;</span><br><span class="line">    <span class="meta">@observable</span> counter;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.counter = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@action</span></span><br><span class="line">    increase = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.counter++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@action</span></span><br><span class="line">    decrease = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.counter--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>src/stores/createStores.js 파일 생성 후 아래 내용을 입력 합니다.</p>
+<li><p>src/stores/createStores.js 파일 생성 후 아래 내용을 입력</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; CounterStore &#125; <span class="keyword">from</span> <span class="string">'./CounterStore'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">createStores</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> counterStore = <span class="keyword">new</span> CounterStore(); <span class="comment">// CounterStore 객체 생성</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        counterStore,</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>src/App.js 파일에 Store를 등록합니다.</p>
+<li><p>src/App.js 파일에 Store를 등록</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">'mobx-react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; createStores &#125; <span class="keyword">from</span> <span class="string">'./stores/createStores'</span>;</span><br><span class="line"><span class="keyword">import</span> Counter <span class="keyword">from</span> <span class="string">'./Components/Counter'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> stores = createStores();</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;Provider &#123;...stores&#125;&gt;</span><br><span class="line">        &lt;View style=&#123;styles.container&#125;&gt;</span><br><span class="line">          &lt;Counter /&gt;</span><br><span class="line">        &lt;<span class="regexp">/View&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>Provider&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>src/components/Counter/index.js 파일을 생성하여 Store를 사용 테스트를 합니다.</p>
+<li><p>src/components/Counter/index.js 파일을 생성하여 Store 사용 테스트</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Text, View, Button &#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; observer, inject &#125; <span class="keyword">from</span> <span class="string">'mobx-react'</span>;</span><br><span class="line"></span><br><span class="line">@inject(<span class="string">'counterStore'</span>)</span><br><span class="line">@observer</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; counter, increase, decrease&#125; = <span class="keyword">this</span>.props.counterStore;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">        &lt;Text&gt;&#123;counter&#125;&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">        &lt;Button</span></span><br><span class="line"><span class="regexp">          onPress=&#123;increase&#125;</span></span><br><span class="line"><span class="regexp">          title="Increase"</span></span><br><span class="line"><span class="regexp">        /</span>&gt;</span><br><span class="line">        &lt;Button </span><br><span class="line">          onPress=&#123;decrease&#125;</span><br><span class="line">          title=<span class="string">"Decrease"</span></span><br><span class="line">        /&gt;</span><br><span class="line">      &lt;<span class="regexp">/View&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>만약 VS Code를 사용하고 있다면 ES6를 사용함에도 불구하고, 데코렝터 에서 tslint 경고가 발생하는데, 아래 방법으로 없앨 수 있습니다.</p>
+<p>만약 VS Code를 사용하고 있다면 ES6를 사용함에도 불구하고, 데코렝터 에서 tslint 경고가 발생하는데, 아래 방법으로 경고 해제</p>
 </blockquote>
 <ul>
-<li><p>Root 폴더 아래 tsconfig.json파일을 생성후 아래 내용을 입력합니다.</p>
+<li><p>Root 폴더 아래 tsconfig.json파일을 생성후 아래 내용을 입력</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"compilerOptions"</span>: &#123;</span><br><span class="line">    <span class="attr">"experimentalDecorators"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"allowJs"</span>: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -257,7 +260,7 @@
 
 
 
-    <a data-url="https://devtory.github.io/2018/11/27/ReactNative(Expo)에 Mobx(ES6) 적용하기/" data-id="cjpakkenn0005vovoota60zx8" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="https://devtory.github.io/2018/11/27/ReactNative(Expo)에 Mobx(ES6) 적용하기/" data-id="cjpeyd07n0004cgvojsz18mcu" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -396,9 +399,9 @@
 <nav id="article-nav">
     
     
-        <a href="/2018/11/23/Promise와 Observable 차이/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/11/23/비동기 프로그래밍과 콜백 함수/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">오래된</strong>
-        <p class="article-nav-title">Promise와 Observable 차이</p>
+        <p class="article-nav-title">비동기 프로그래밍과 콜백 함수</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -425,7 +428,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">태그</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Backend/">Backend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Expo/">Expo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mobx/">Mobx</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typescript/">Typescript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/observable/">observable</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Backend/">Backend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Expo/">Expo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mobx/">Mobx</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typescript/">Typescript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asynchronous/">asynchronous</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/callback/">callback</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/비동기/">비동기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/콜백/">콜백</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 

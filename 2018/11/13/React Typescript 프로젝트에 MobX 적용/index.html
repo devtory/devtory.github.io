@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="React,Mobx">
     
-    <meta name="description" content="React Typescript 프로젝트에 MobX 적용 목표 : Typescript로 구성된 React 프로젝트에 MobX를 적용하고 Store 기반의 라우터 사용   환경 123Windows 10Node.js 8.11.2CRA 2.1.1  MobX ?  MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중 하나 입니다.  공식홈페이지에서는 M">
+    <meta name="description" content="React Typescript 프로젝트에 MobX 적용 정리 목적으로 작성한 글 입니다   목표 : Typescript로 구성된 React 프로젝트에 MobX를 적용하고 Store 기반의 라우터 사용   환경 123Windows 10Node.js 8.11.2CRA 2.1.1  MobX ?  MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중">
 <meta name="keywords" content="React,Mobx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React Typescript 프로젝트에 MobX 적용">
 <meta property="og:url" content="https://devtory.github.io/2018/11/13/React Typescript 프로젝트에 MobX 적용/index.html">
 <meta property="og:site_name" content="devtory">
-<meta property="og:description" content="React Typescript 프로젝트에 MobX 적용 목표 : Typescript로 구성된 React 프로젝트에 MobX를 적용하고 Store 기반의 라우터 사용   환경 123Windows 10Node.js 8.11.2CRA 2.1.1  MobX ?  MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중 하나 입니다.  공식홈페이지에서는 M">
+<meta property="og:description" content="React Typescript 프로젝트에 MobX 적용 정리 목적으로 작성한 글 입니다   목표 : Typescript로 구성된 React 프로젝트에 MobX를 적용하고 Store 기반의 라우터 사용   환경 123Windows 10Node.js 8.11.2CRA 2.1.1  MobX ?  MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://devtory.github.io/2018/11/13/React%20Typescript%20프로젝트에%20MobX%20적용/result.gif">
-<meta property="og:updated_time" content="2018-12-03T13:00:07.720Z">
+<meta property="og:updated_time" content="2018-12-08T04:18:37.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Typescript 프로젝트에 MobX 적용">
-<meta name="twitter:description" content="React Typescript 프로젝트에 MobX 적용 목표 : Typescript로 구성된 React 프로젝트에 MobX를 적용하고 Store 기반의 라우터 사용   환경 123Windows 10Node.js 8.11.2CRA 2.1.1  MobX ?  MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중 하나 입니다.  공식홈페이지에서는 M">
+<meta name="twitter:description" content="React Typescript 프로젝트에 MobX 적용 정리 목적으로 작성한 글 입니다   목표 : Typescript로 구성된 React 프로젝트에 MobX를 적용하고 Store 기반의 라우터 사용   환경 123Windows 10Node.js 8.11.2CRA 2.1.1  MobX ?  MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중">
 <meta name="twitter:image" content="https://devtory.github.io/2018/11/13/React%20Typescript%20프로젝트에%20MobX%20적용/result.gif">
     
 
@@ -178,6 +178,9 @@
         
         <div class="article-entry" itemprop="articleBody">
             <h2 id="React-Typescript-프로젝트에-MobX-적용"><a href="#React-Typescript-프로젝트에-MobX-적용" class="headerlink" title="React Typescript 프로젝트에 MobX 적용"></a>React Typescript 프로젝트에 MobX 적용</h2><blockquote>
+<p>정리 목적으로 작성한 글 입니다</p>
+</blockquote>
+<blockquote>
 <p>목표 : Typescript로 구성된 React 프로젝트에 MobX를 적용하고 Store 기반의 라우터 사용</p>
 </blockquote>
 <ul>
@@ -186,61 +189,63 @@
 </li>
 <li><p>MobX ?</p>
 <ul>
-<li><p>MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중 하나 입니다.</p>
+<li><p>MobX는 Redux와 함께 가장 인기있는 상태관리 라이브러리 중 하나</p>
 </li>
-<li><p>공식홈페이지에서는 Mobx를 매우 단순하고 확장성이 좋다고 소개 하고 있습니다. Redux와 비교해 볼때 충분히 동의할만한 내용입니다.</p>
+<li><p>공식홈페이지에서는 MobX를 매우 단순하고 확장성이 좋다고 소개 하고 있다</p>
 </li>
-<li><p>Mobx는 React가 상태를 저장하고 업데이트 하는 방식과 유사한 메커니즘을 제공하기 때문에  React와의 조합이 매우 강력하다고 합니다.</p>
-</li>
-<li><p>Mobx에 대한 세부 사항은 공식문서를 보실것을 추천드립니다.  (정리가 매우 잘 되어있습니다.)</p>
+<li><p>MobX는 React가 상태를 저장하고 업데이트 하는 방식과 유사한 메커니즘을 제공하기 때문에  React와의 조합이 매우 좋다</p>
 </li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>먼저, 프로젝트를 생성 후 Mobx를 적용해 보도록 하겠습니다.</p>
+<p>프로젝트를 생성 후 MobX를 적용</p>
 </blockquote>
 <ul>
-<li><p>crea-react-app으로 Typescript 프로젝트 생성하기</p>
+<li><p>crea-react-app으로 Typescript 프로젝트 생성</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install -g create-react-app</span><br><span class="line"><span class="meta">$</span> create-react-app &lt;프로젝트명&gt; --scripts-version=react-scripts-ts</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>mobx, react-router 설치</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd &lt;프로젝트명&gt;</span><br><span class="line"><span class="meta">$</span> yarn add mobx mobx-react</span><br></pre></td></tr></table></figure>
 <ul>
-<li>mobx패키지는 타입정의파일(d.ts)이 내장되어있어 별도 설치가 필요 없습니다.</li>
+<li>mobX는 타이프스크립트로 작성되어, 타입정의파일(d.ts)이 별도 설치가 필요 없음</li>
 </ul>
 </li>
 <li><p>데코레이터를 사용하기 위해 tsconfig.json 파일에 아래내용 추가</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"compilerOptions"</span>: &#123;</span><br><span class="line">		...,</span><br><span class="line">		"experimentalDecorators": true</span><br><span class="line">	&#125;,</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>(선택사항) tslint.json에 귀찮은 옵션을 해제 합니다</p>
+<li><p>(선택사항) tslint.json에 귀찮은 옵션을 해제</p>
 <ul>
-<li>“ordered-imports”는 모듈 import시 A, B, C 순으로 호출하지 않을 경우 경고를 발생시켜 줍니다. 이 옵션은 아래 내용을 추가하여 해제 하겠습니다.</li>
+<li>“ordered-imports”는 모듈 import시 A, B, C 순으로 호출하지 않을 경우 경고 발생 시키므로 해제</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  ...</span><br><span class="line">	"rules": &#123;</span><br><span class="line">    	"ordered-imports": false</span><br><span class="line">  	&#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>디렉토리 구조</p>
 <ul>
-<li>디렉토리 구조에 대한 대한 표준은 없습니다.</li>
-<li>여러가지 유형 중 저는 아래와 같은 구조를 선호 합니다.</li>
+<li>디렉토리 구조에 대한 대한 표준은 없이 개발자에 따라 다름</li>
+<li>아래와 같은 구조로 폴더를 생성</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+-- src</span><br><span class="line">   +-- stores        ※ 여러개의 store 생성 가능</span><br><span class="line">   +-- constant      ※ props로 전달되는 store 객체의 Key값으로 사용될 상수</span><br><span class="line">   +-- view</span><br><span class="line">       +-- containers   ※ store가 주입(inject)되는 컴포넌트</span><br><span class="line">       +-- components   ※ props를 통해 container로부터  store데이터를 전달받음</span><br><span class="line">                          (권장사항으로 component에서 직접 store를 주입해도 상관없습니다)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
-<p>단순한 카운터를 예를 들어 스토어와 아래 컴포넌트를 생성해 보겠습니다.</p>
+<p>단순한 카운터를 예를 들어 스토어와 아래 컴포넌트를 생성 하기</p>
 </blockquote>
 <ul>
 <li><p>Store 생성</p>
 <ul>
-<li><p>src/stores/CounterStore.ts 파일 생성 후 아래 내용을 입력 합니다.</p>
+<li><p>src/stores/CounterStore.ts 파일 생성 후 아래 내용을 입력</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; observable, action &#125; <span class="keyword">from</span> <span class="string">'mobx'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> CounterStore &#123;</span><br><span class="line">    <span class="meta">@observable</span> <span class="keyword">public</span> counter: <span class="built_in">number</span>;</span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.counter = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@action</span></span><br><span class="line">    <span class="keyword">public</span> increase = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.counter++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@action</span></span><br><span class="line">    <span class="keyword">public</span> decrease = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.counter--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>데코레이터 설명</p>
 <ul>
-<li><p>@observable : observer로 관찰 가능해짐, 즉 값이 변경되면 observer에게 알림.</p>
+<li>@observable <ul>
+<li>observer로 관찰 가능해짐, 즉 값이 변경되면 observer에게 알림</li>
+</ul>
 </li>
-<li><p>@action : @observable값을 변경 시키는 경우 사용</p>
+<li>@action<ul>
+<li>@observable값을 변경 시키는 경우 사용</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -248,25 +253,25 @@
 </li>
 <li><p>Store를 구분하기 위한 키(상수) 등록</p>
 <ul>
-<li><p>src/constant/stores.const.ts파일 생성후 아래 내용을 입력합니다.</p>
+<li><p>src/constant/stores.const.ts파일 생성후 아래 내용을 입력</p>
 </li>
-<li><p>언제나 그렇듯 정해진 형식은 없으니 나름의 기준을 정해 이름을 정하시면 됩니다.</p>
+<li><p>정해진 형식이 없어 나름의 기준으로 이름 선정</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> COUNTER_STORE = <span class="string">'counter_store'</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>Store를 생성하기 위한 함수를 만듭니다</p>
+<li><p>Store를 생성하기 위한 함수를 생성</p>
 <ul>
-<li><p>src/stores/createStores.ts파일 생성후 아래 내용을 입력 합니다.</p>
+<li><p>src/stores/createStores.ts파일 생성후 아래 내용을 입력</p>
 </li>
-<li><p>이후 추가되는 Store는 모두 이곳에 작성을 합니다.</p>
+<li><p>이후 추가되는 Store는 모두 이곳에 추가</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; CounterStore &#125; <span class="keyword">from</span> <span class="string">'./CounterStore'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; COUNTER_STORE &#125; <span class="keyword">from</span> <span class="string">'src/constant/stores.const'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">createStores</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> counterStore = <span class="keyword">new</span> CounterStore(); <span class="comment">// CounterStore 객체 생성</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        [COUNTER_STORE]: counterStore,</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p>Store 등록</p>
 <ul>
-<li><p>src/index.tsx파일을 아래와 같이 수정합니다.</p>
+<li><p>src/index.tsx파일을 아래와 같이 수정</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">'mobx-react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; createStores &#125; <span class="keyword">from</span> <span class="string">'src/stores/createStores'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> stores = createStores();</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Provider &#123;...stores&#125;&gt;</span><br><span class="line">    &lt;App /&gt;</span><br><span class="line">  &lt;<span class="regexp">/Provider&gt;,</span></span><br><span class="line"><span class="regexp">  document.getElementById('root') as HTMLElement</span></span><br><span class="line"><span class="regexp">);</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">...</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -275,22 +280,22 @@
 </li>
 </ul>
 <blockquote>
-<p>이제 스토어를 사용하면 됩니다.</p>
+<p>스토어 사용</p>
 </blockquote>
 <ul>
 <li><p>컴포넌트 만들기</p>
 <ul>
-<li><p>src/view/containers/Counter/index.tsx 파일을 생성합니다.</p>
+<li><p>src/view/containers/Counter/index.tsx 파일을 생성</p>
 </li>
-<li><p>예제 이므로 components 폴더는 사용하지 않습니다.</p>
+<li><p>예제 이므로 components 폴더는 사용하지 않고 containers에 모두 작성</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; observer, inject &#125; <span class="keyword">from</span> <span class="string">'mobx-react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; CounterStore &#125; <span class="keyword">from</span> <span class="string">'src/stores/CounterStore'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; COUNTER_STORE &#125; <span class="keyword">from</span> <span class="string">'src/constant/stores.const'</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@inject</span>(</span><br><span class="line">  COUNTER_STORE</span><br><span class="line">)</span><br><span class="line"><span class="meta">@observer</span></span><br><span class="line"><span class="keyword">class</span> Counter <span class="keyword">extends</span> React.Component&lt;&#123;&#125;, &#123;&#125;&gt; &#123;</span><br><span class="line">  <span class="keyword">public</span> render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; counter, increase, decrease &#125; = (<span class="keyword">this</span>.props[COUNTER_STORE] <span class="keyword">as</span> CounterStore);</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h2&gt;Counter : &#123;counter&#125;&lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">        &lt;button onClick=&#123;increase&#125;&gt;Increase&lt;/</span>button&gt;</span><br><span class="line">        &lt;button onClick=&#123;decrease&#125;&gt;Decrease&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Counter;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>데코</p>
-<ul>
-<li><p>@inject : 컴포넌트의 props에 스토어 주입</p>
+<li>@inject <ul>
+<li>컴포넌트의 props에 스토어 주입</li>
+</ul>
 </li>
-<li><p>@observer: 스토어의 변화를 관찰하여 업데이트시 결과 반영</p>
-</li>
+<li>@observer<ul>
+<li>스토어의 변화를 관찰하여 업데이트시 결과 반영</li>
 </ul>
 </li>
 </ul>
@@ -316,7 +321,7 @@
 
 
 
-    <a data-url="https://devtory.github.io/2018/11/13/React Typescript 프로젝트에 MobX 적용/" data-id="cjpakkenm0004vovo4zclpdel" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="https://devtory.github.io/2018/11/13/React Typescript 프로젝트에 MobX 적용/" data-id="cjpeyd07i0001cgvo263zryqc" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -494,7 +499,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">태그</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Backend/">Backend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Expo/">Expo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mobx/">Mobx</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typescript/">Typescript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/observable/">observable</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Backend/">Backend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Expo/">Expo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mobx/">Mobx</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typescript/">Typescript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asynchronous/">asynchronous</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/callback/">callback</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/비동기/">비동기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/콜백/">콜백</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
