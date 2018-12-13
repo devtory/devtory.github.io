@@ -2,37 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://devtory.github.io/2018/11/23/%EB%B9%84%EB%8F%99%EA%B8%B0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC%20%EC%BD%9C%EB%B0%B1%20%ED%95%A8%EC%88%98/</loc>
+    <loc>https://devtory.github.io/2018/11/23/React%20Navigation%20%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0%20-%2001/</loc>
     
-    <lastmod>2018-12-08T04:37:45.343Z</lastmod>
+    <lastmod>2018-12-11T05:14:59.172Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://devtory.github.io/2018/11/11/ReactNative(Expo)%EC%97%90%20Typescript%20%EC%A0%81%EC%9A%A9/</loc>
     
-    <lastmod>2018-12-08T04:22:11.764Z</lastmod>
+    <lastmod>2018-12-10T02:56:53.242Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://devtory.github.io/2018/11/27/ReactNative(Expo)%EC%97%90%20Mobx(ES6)%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</loc>
     
-    <lastmod>2018-12-08T04:20:51.117Z</lastmod>
+    <lastmod>2018-12-10T02:56:50.623Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://devtory.github.io/2018/11/23/%EB%B9%84%EB%8F%99%EA%B8%B0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC%20%EC%BD%9C%EB%B0%B1%20%ED%95%A8%EC%88%98/</loc>
+    
+    <lastmod>2018-12-10T02:53:26.807Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://devtory.github.io/2018/11/13/React%20Typescript%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90%20MobX%20%EC%A0%81%EC%9A%A9/</loc>
     
-    <lastmod>2018-12-08T04:18:37.568Z</lastmod>
+    <lastmod>2018-12-08T07:00:17.301Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://devtory.github.io/2018/11/16/Express%EC%97%90%20Typescript%EC%99%80%20Inversify%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</loc>
     
-    <lastmod>2018-12-08T04:05:25.469Z</lastmod>
+    <lastmod>2018-12-08T06:59:53.134Z</lastmod>
     
   </url>
   

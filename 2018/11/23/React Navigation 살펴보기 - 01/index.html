@@ -6,26 +6,24 @@
     
 
     
-    <title>ReactNative(Expo)에 Typescript 적용 | devtory</title>
+    <title>React Navigation 살펴보기 - 01 | devtory</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Typescript,ReactNative,Expo">
+        <meta name="keywords" content="ReactNative,React Navigation">
     
-    <meta name="description" content="ReactNative(Expo)에 Typescript 적용 정리 목적으로 작성한 글 입니다   목표 : Expo CLI를 통해 생성된 프로젝트에 Typescript 적용   환경 123Windows 10Node.js 8.11.2Expo CLI 2.X (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경)  Expo CLI 설치 1$ yarn gl">
-<meta name="keywords" content="Typescript,ReactNative,Expo">
+    <meta name="description" content="React Navigation 살펴보기 - 01 정리 목적으로 작성한 글 입니다   목표 :  공식문서에 소개된, React Navigation 기본 동작 다뤄보기   환경 1234Windows 10Node.js 8.11.2Npm 6.4.1 / yarn 1.7.0React Navigation 3.0.X  React Navigation 패키지 설치 12$ y">
+<meta name="keywords" content="ReactNative,React Navigation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ReactNative(Expo)에 Typescript 적용">
-<meta property="og:url" content="https://devtory.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/index.html">
+<meta property="og:title" content="React Navigation 살펴보기 - 01">
+<meta property="og:url" content="https://devtory.github.io/2018/11/23/React Navigation 살펴보기 - 01/index.html">
 <meta property="og:site_name" content="devtory">
-<meta property="og:description" content="ReactNative(Expo)에 Typescript 적용 정리 목적으로 작성한 글 입니다   목표 : Expo CLI를 통해 생성된 프로젝트에 Typescript 적용   환경 123Windows 10Node.js 8.11.2Expo CLI 2.X (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경)  Expo CLI 설치 1$ yarn gl">
+<meta property="og:description" content="React Navigation 살펴보기 - 01 정리 목적으로 작성한 글 입니다   목표 :  공식문서에 소개된, React Navigation 기본 동작 다뤄보기   환경 1234Windows 10Node.js 8.11.2Npm 6.4.1 / yarn 1.7.0React Navigation 3.0.X  React Navigation 패키지 설치 12$ y">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://devtory.github.io/2018/11/11/ReactNative(Expo)에%20Typescript%20적용/postman_result.jpg">
-<meta property="og:updated_time" content="2018-12-10T02:56:53.242Z">
+<meta property="og:updated_time" content="2018-12-11T05:14:59.172Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ReactNative(Expo)에 Typescript 적용">
-<meta name="twitter:description" content="ReactNative(Expo)에 Typescript 적용 정리 목적으로 작성한 글 입니다   목표 : Expo CLI를 통해 생성된 프로젝트에 Typescript 적용   환경 123Windows 10Node.js 8.11.2Expo CLI 2.X (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경)  Expo CLI 설치 1$ yarn gl">
-<meta name="twitter:image" content="https://devtory.github.io/2018/11/11/ReactNative(Expo)에%20Typescript%20적용/postman_result.jpg">
+<meta name="twitter:title" content="React Navigation 살펴보기 - 01">
+<meta name="twitter:description" content="React Navigation 살펴보기 - 01 정리 목적으로 작성한 글 입니다   목표 :  공식문서에 소개된, React Navigation 기본 동작 다뤄보기   환경 1234Windows 10Node.js 8.11.2Npm 6.4.1 / yarn 1.7.0React Navigation 3.0.X  React Navigation 패키지 설치 12$ y">
     
 
     
@@ -143,14 +141,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-ReactNative(Expo)에 Typescript 적용" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-React Navigation 살펴보기 - 01" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        ReactNative(Expo)에 Typescript 적용
+        React Navigation 살펴보기 - 01
         </h1>
     
 
@@ -160,8 +158,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/11/11/ReactNative(Expo)에 Typescript 적용/" class="article-date">
-            <time datetime="2018-11-11T08:41:47.000Z" itemprop="datePublished">2018-11-11</time>
+        <a href="/2018/11/23/React Navigation 살펴보기 - 01/" class="article-date">
+            <time datetime="2018-11-23T06:43:05.000Z" itemprop="datePublished">2018-11-23</time>
         </a>
     </div>
 
@@ -170,64 +168,69 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Expo/">Expo</a>, <a class="tag-link" href="/tags/ReactNative/">ReactNative</a>, <a class="tag-link" href="/tags/Typescript/">Typescript</a>
+        <a class="tag-link" href="/tags/React-Navigation/">React Navigation</a>, <a class="tag-link" href="/tags/ReactNative/">ReactNative</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="ReactNative-Expo-에-Typescript-적용"><a href="#ReactNative-Expo-에-Typescript-적용" class="headerlink" title="ReactNative(Expo)에 Typescript 적용"></a>ReactNative(Expo)에 Typescript 적용</h2><blockquote>
+            <h1 id="React-Navigation-살펴보기-01"><a href="#React-Navigation-살펴보기-01" class="headerlink" title="React Navigation 살펴보기 - 01"></a>React Navigation 살펴보기 - 01</h1><blockquote>
 <p>정리 목적으로 작성한 글 입니다</p>
 </blockquote>
 <blockquote>
-<p>목표 : Expo CLI를 통해 생성된 프로젝트에 Typescript 적용</p>
+<p>목표 :  공식문서에 소개된, React Navigation 기본 동작 다뤄보기</p>
 </blockquote>
 <ul>
 <li><p>환경</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Windows 10</span><br><span class="line">Node.js 8.11.2</span><br><span class="line">Expo CLI 2.X (Ver 2.x → CRNA 기능 통합, XDE 웹기반으로 변경)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows 10</span><br><span class="line">Node.js 8.11.2</span><br><span class="line">Npm 6.4.1 / yarn 1.7.0</span><br><span class="line">React Navigation 3.0.X</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Expo CLI 설치</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> yarn global expo-cli    ※ 또는 npm isntall -g expo-cli</span><br></pre></td></tr></table></figure>
+<li><p>React Navigation 패키지 설치</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> yarn add react-navigation</span><br><span class="line"><span class="meta">$</span> yarn add react-native-gesture-handler  # expo 사용시 실치 및 MainActivity.java 수정필요 없음 ※ 공홈 참조</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>프로젝트 생성 </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> expo init &lt;Project Name&gt;  ※ "blank app" 선택</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Typescript관련 패키지 설치</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd &lt;Project Name&gt;</span><br><span class="line"><span class="meta">$</span> yarn add typescript react-native-typescript-transformer tslib</span><br><span class="line"><span class="meta">$</span> yarn add @types/react @types/react-native @types/expo @types/expo__vector-icons --dev</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>tsconfig.json 파일 생성 &amp; 수정</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ./node_modules/.bin/tsc.cmd --init  ※ "tsconfig.json"파일 생성</span><br></pre></td></tr></table></figure>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"compilerOptions"</span>: &#123;</span><br><span class="line">      <span class="attr">"target"</span>: <span class="string">"es2017"</span>,</span><br><span class="line">      <span class="attr">"module"</span>: <span class="string">"es2015"</span>,</span><br><span class="line">      <span class="attr">"lib"</span>: [</span><br><span class="line">          <span class="string">"es2017"</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">"jsx"</span>: <span class="string">"react-native"</span>,</span><br><span class="line">      <span class="attr">"sourceMap"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"noEmit"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"importHelpers"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"moduleResolution"</span>: <span class="string">"node"</span>,</span><br><span class="line">      <span class="attr">"allowSyntheticDefaultImports"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"experimentalDecorators"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"emitDecoratorMetadata"</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"exclude"</span>: [</span><br><span class="line">      <span class="string">"node_modules"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>tslint.json 파일 생성</p>
-<ul>
-<li><p>세부 설정은 <a href="https://palantir.github.io/tslint/rules/" target="_blank" rel="noopener">tslint 공식홈</a> 참조</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"extends"</span>: [<span class="string">"tslint:recommended"</span>, <span class="string">"tslint-react"</span>, <span class="string">"tslint-config-prettier"</span>],</span><br><span class="line">  <span class="attr">"linterOptions"</span>: &#123;</span><br><span class="line">    <span class="attr">"exclude"</span>: [</span><br><span class="line">      <span class="string">"config/**/*.js"</span>,</span><br><span class="line">      <span class="string">"node_modules/**/*.ts"</span>,</span><br><span class="line">      <span class="string">"coverage/lcov-report/*.js"</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>Expo 프로젝트 생성</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ expo init &lt;Project Name&gt;  ※ &quot;blank app&quot; 선택</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-</li>
-<li><p>app.json파일  수정</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"expo"</span>: &#123;</span><br><span class="line">        <span class="attr">"packagerOpts"</span>: &#123;</span><br><span class="line">          <span class="attr">"sourceExts"</span>: [<span class="string">"ts"</span>, <span class="string">"tsx"</span>],</span><br><span class="line">          <span class="attr">"transformer"</span>: <span class="string">"node_modules/react-native-typescript-transformer/index.js"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>파일명 변경</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir src</span><br><span class="line"><span class="meta">$</span> mv App.js src/App.tsx</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="React-Navigation-시작"><a href="#React-Navigation-시작" class="headerlink" title="React Navigation 시작"></a>React Navigation 시작</h3><ul>
+<li><p>Stack Navigator</p>
 <ul>
-<li><p>App.ts 파일생성</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./src/App'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+<li><p>브라우저에서 사용자가 <code>&lt;a&gt;</code>태그(anchor tag)를 클릭 후 뒤로가기 버튼을 누르는 경우 global history stack에 화면을 push/pop하여 기록한다. </p>
 </li>
-</ul>
+<li><p>ReactNative는 global history stack은 갖고 있지 않지만, 유사한 개념의 Stack Navigator를 제공 한다.</p>
 </li>
-<li><p>실행</p>
+<li><p>브라우저와 다른점은, Stack Navigator는 stack의 경로를 탐색할때 iOS와 Android에 제스처와 애니메이션을 제공한다는 점이다.</p>
+</li>
+<li><p>엔트리 포인트 변경</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir src</span><br><span class="line"><span class="meta">$</span> cp App.js ./src</span><br><span class="line"><span class="meta">$</span> touch App.js</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// App.js 파일</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./src/App'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Stack Navigator 작성</p>
 <ul>
-<li>스마트 폰에 Expo앱 설치후 아래 명령어 입력</li>
+<li><p>src/App.js에 HomeScreen 컴포넌트 추가</p>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HomeScreen</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;View style=&#123;&#123; <span class="attr">flex</span>: <span class="number">1</span>, <span class="attr">alignItems</span>: <span class="string">"center"</span>, <span class="attr">justifyContent</span>: <span class="string">"center"</span> &#125;&#125;&gt;</span><br><span class="line">        &lt;Text&gt;Home Screen&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>src/App.js에 DetailsScreen 컴포넌트 추가</p>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HomeScreen</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;View style=&#123;&#123; <span class="attr">flex</span>: <span class="number">1</span>, <span class="attr">alignItems</span>: <span class="string">"center"</span>, <span class="attr">justifyContent</span>: <span class="string">"center"</span> &#125;&#125;&gt;</span><br><span class="line">        &lt;Text&gt;Home Screen&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>src/App.js에 Stack Navigator 생성 및 AppContainer 생성</p>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createStackNavigator, createAppContainer &#125; <span class="keyword">from</span> <span class="string">"react-navigation"</span>;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> AppNavigator = createStackNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    Home: HomeScreen,</span><br><span class="line">    Details: DetailsScreen,   </span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName: <span class="string">"Details"</span></span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> AppContainer = createAppContainer(AppNavigator);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>initialRouteName에 따라 처음 렌더링 되는 화면이 달라집니다.</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ expo start    ※ 스마트폰에서 생성된 QR코드 스캔</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>src/App.js에 App 컴포넌트 아래와 같이 수정</p>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;AppContainer /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 <li><p>결과</p>
-<p><img src="postman_result.jpg" alt="실행화면"></p>
+<ul>
+<li>실행하면 화면 상단에 Appbar가 생기고, initialRuteName에 입력된 초기 화면이 렌더링 되는 것을 볼 수 있다.</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -237,7 +240,7 @@
 
 
 
-    <a data-url="https://devtory.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/" data-id="cjplwetl2000yk0vo305r5mf0" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="https://devtory.github.io/2018/11/23/React Navigation 살펴보기 - 01/" data-id="cjplwetj40004k0vorsv46uim" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -375,16 +378,22 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/11/13/React Typescript 프로젝트에 MobX 적용/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2018/11/27/ReactNative(Expo)에 Mobx(ES6) 적용하기/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">새로운</strong>
         <p class="article-nav-title">
         
-            (no title)
+            ReactNative(Expo)에 Mobx(ES6) 적용하기
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
+    
+        <a href="/2018/11/23/비동기 프로그래밍과 콜백 함수/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">오래된</strong>
+        <p class="article-nav-title">비동기 프로그래밍과 콜백 함수</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -449,7 +458,7 @@
     var disqus_shortname = 'unknownerror';
     
     
-    var disqus_url = 'https://devtory.github.io/2018/11/11/ReactNative(Expo)에 Typescript 적용/';
+    var disqus_url = 'https://devtory.github.io/2018/11/23/React Navigation 살펴보기 - 01/';
     
     (function() {
     var dsq = document.createElement('script');
