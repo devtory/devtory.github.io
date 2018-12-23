@@ -21,7 +21,7 @@
 <meta property="og:description" content="NestJS와 MongoDB 그리고 Swagger 정리 목적으로 작성한 글 입니다   목표 : NestJS와 MongoDB를 이용해 간단한 API를 만들고, Swagger를 적용하여 API 문서화 해보기  참고 Nest.js 공식문서 : https://docs.nestjs.com  Nest.js ? Nest.js는 Express기반에 서버사이드 프레임워크로">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://devtory.github.io/2018/12/02/NestJS와%20MongoDB%20그리고%20Swagger/nest_js.png">
-<meta property="og:updated_time" content="2018-12-20T03:20:35.957Z">
+<meta property="og:updated_time" content="2018-12-20T05:20:24.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NestJS와 MongoDB 그리고 Swagger">
 <meta name="twitter:description" content="NestJS와 MongoDB 그리고 Swagger 정리 목적으로 작성한 글 입니다   목표 : NestJS와 MongoDB를 이용해 간단한 API를 만들고, Swagger를 적용하여 API 문서화 해보기  참고 Nest.js 공식문서 : https://docs.nestjs.com  Nest.js ? Nest.js는 Express기반에 서버사이드 프레임워크로">
@@ -202,10 +202,10 @@
 </ul>
 <h3 id="Nest-js-및-관련-패키지-설치"><a href="#Nest-js-및-관련-패키지-설치" class="headerlink" title="Nest.js 및 관련 패키지 설치"></a>Nest.js 및 관련 패키지 설치</h3><ul>
 <li><p>Nest.js도 CLI를 제공한다. 아래와 같이 CLI를 설치 후 프로젝트 생성은 아래와 같다</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm i -g @nestjs/cli</span><br><span class="line"><span class="meta">$</span> nest new nest-mongo</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm i -g @nestjs/cli</span><br><span class="line"><span class="meta">$</span> nest new nest-mongo-swagger</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>스타터 프로젝트를 직접 클론해서 사용하는 것도 가능</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/nestjs/typescript-starter.git nest-mongo</span><br><span class="line"><span class="meta">$</span> cd nest-mongo</span><br><span class="line"><span class="meta">$</span> npm install</span><br><span class="line"><span class="meta">$</span> npm run start</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/nestjs/typescript-starter.git nest-mongo-swagger</span><br><span class="line"><span class="meta">$</span> cd nest-mongo</span><br><span class="line"><span class="meta">$</span> npm install</span><br><span class="line"><span class="meta">$</span> npm run start</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Mongoose 설치</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> yarn add mongoose @nestjs/mongoose</span><br><span class="line"><span class="meta">$</span> yarn add @types/mongoose --dev</span><br></pre></td></tr></table></figure>
@@ -439,7 +439,7 @@
 
 
 
-    <a data-url="https://devtory.github.io/2018/12/02/NestJS와 MongoDB 그리고 Swagger/" data-id="cjpw1gr4w0001ykvoq5p72bhd" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="https://devtory.github.io/2018/12/02/NestJS와 MongoDB 그리고 Swagger/" data-id="cjq0tzqj00001y0voc7x0b8ek" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -577,6 +577,16 @@
         
 <nav id="article-nav">
     
+        <a href="/2018/12/08/React Navigation 살펴보기 - 02/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">새로운</strong>
+        <p class="article-nav-title">
+        
+            React Navigation 살펴보기 - 02
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2018/11/27/ReactNative(Expo)에 Mobx(ES6) 적용하기/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">오래된</strong>
@@ -597,7 +607,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">카테고리</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Backend/">Backend</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Backend/Express/">Express</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Backend/Express/Nest-js/">Nest.js</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Backend/Express/Typescirpt/">Typescirpt</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mobile/">Mobile</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mobile/ReactNative/">ReactNative</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Backend/">Backend</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Backend/Express/">Express</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Backend/Express/Nest-js/">Nest.js</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Backend/Express/Typescirpt/">Typescirpt</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mobile/">Mobile</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mobile/ReactNative/">ReactNative</a><span class="category-list-count">5</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -607,7 +617,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">태그</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Backend/">Backend</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Expo/">Expo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mobx/">Mobx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nest/">Nest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React-Navigation/">React Navigation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typescript/">Typescript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asynchronous/">asynchronous</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/callback/">callback</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/비동기/">비동기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/콜백/">콜백</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Backend/">Backend</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Expo/">Expo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mobx/">Mobx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nest/">Nest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React-Navigation/">React Navigation</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typescript/">Typescript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asynchronous/">asynchronous</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/callback/">callback</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/비동기/">비동기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/콜백/">콜백</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
